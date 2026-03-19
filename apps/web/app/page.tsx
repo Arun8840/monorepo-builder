@@ -1,11 +1,3 @@
-import { Button } from "@repo/ui";
-
 export default function Page() {
-  return (
-    <main className="flex flex-col items-center justify-between min-h-screen p-24">
-      <Button variant={"default"} size={"sm"}>
-        hello
-      </Button>
-    </main>
-  );
+  return <main className="min-h-screen grid place-items-center p-2">/</main>;
 }
