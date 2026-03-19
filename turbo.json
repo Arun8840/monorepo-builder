@@ -5,7 +5,8 @@
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
+      "env": ["DATABASE_URL", "NEXT_PUBLIC_API_URL"]
     },
     "lint": {
       "dependsOn": ["^lint"]
@@ -17,5 +18,6 @@
       "cache": false,
       "persistent": true
     }
-  }
+  },
+  "globalEnv": ["DATABASE_URL", "NODE_ENV", "NEXT_PUBLIC_API_URL"]
 }
