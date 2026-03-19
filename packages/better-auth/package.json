@@ -1,0 +1,35 @@
+{
+  "name": "@repo/better-auth",
+  "version": "0.1.0",
+  "private": true,
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./client": {
+      "types": "./src/client.ts",
+      "default": "./src/client.ts"
+    },
+    "./types": {
+      "types": "./src/types.ts",
+      "default": "./src/types.ts"
+    },
+    "./next-js": {
+      "types": "./src/next-js.ts",
+      "default": "./src/next-js.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rm -rf node_modules"
+  },
+  "dependencies": {
+    "@repo/ui": "workspace:*",
+    "better-auth": "^1.5.5"
+  },
+  "devDependencies": {
+    "@repo/env": "workspace:*",
+    "typescript": "^5.0.0"
+  }
+}

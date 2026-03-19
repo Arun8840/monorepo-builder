@@ -1,0 +1,36 @@
+{
+  "name": "@repo/db",
+  "version": "0.1.0",
+  "private": true,
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./client": {
+      "types": "./src/client.ts",
+      "default": "./src/client.ts"
+    },
+    "./types": {
+      "types": "./src/types.ts",
+      "default": "./src/types.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rm -rf node_modules",
+    "db:push": "dotenv -e ../../.env -- drizzle-kit push",
+    "db:studio": "dotenv -e ../../.env -- drizzle-kit studio",
+    "db:generate": "dotenv -e ../../.env -- drizzle-kit generate"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.2",
+    "drizzle-orm": "^0.45.1"
+  },
+  "devDependencies": {
+    "@repo/env": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "drizzle-kit": "^0.31.10",
+    "typescript": "^5.0.0"
+  }
+}
