@@ -118,6 +118,9 @@ importers:
       react-hook-form:
         specifier: ^7.71.2
         version: 7.71.2(react@19.2.0)
+      zod:
+        specifier: ^4.3.6
+        version: 4.3.6
     devDependencies:
       '@next/eslint-plugin-next':
         specifier: ^15.4.6
@@ -161,6 +164,12 @@ importers:
 
   packages/better-auth:
     dependencies:
+      '@repo/db':
+        specifier: workspace:*
+        version: link:../db
+      '@repo/env':
+        specifier: workspace:*
+        version: link:../env
       '@repo/ui':
         specifier: workspace:*
         version: link:../ui
@@ -168,9 +177,6 @@ importers:
         specifier: ^1.5.5
         version: 1.5.5(@prisma/client@6.19.2(prisma@6.19.2(typescript@5.9.2))(typescript@5.9.2))(drizzle-kit@0.31.10)(drizzle-orm@0.45.1(@neondatabase/serverless@1.0.2)(@prisma/client@6.19.2(prisma@6.19.2(typescript@5.9.2))(typescript@5.9.2))(@types/pg@8.18.0)(kysely@0.28.13)(prisma@6.19.2(typescript@5.9.2)))(mongodb@7.1.0)(next@16.1.5(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(prisma@6.19.2(typescript@5.9.2))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
     devDependencies:
-      '@repo/env':
-        specifier: workspace:*
-        version: link:../env
       typescript:
         specifier: ^5.0.0
         version: 5.9.2
@@ -301,6 +307,10 @@ importers:
         version: 5.9.2
 
   packages/validation:
+    dependencies:
+      zod:
+        specifier: ^3.25.76
+        version: 3.25.76
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -314,9 +324,6 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.9.2
-      zod:
-        specifier: ^4.1.13
-        version: 4.3.6
 
 packages:
 
