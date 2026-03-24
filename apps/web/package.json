@@ -17,6 +17,7 @@
     "@repo/env": "workspace:*",
     "@repo/ui": "workspace:*",
     "@repo/validation": "workspace:*",
+    "@repo/stores": "workspace:*",
     "next": "16.1.5",
     "react": "^19.2.0",
     "react-dom": "^19.1.0",

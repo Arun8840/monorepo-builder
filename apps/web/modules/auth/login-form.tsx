@@ -17,6 +17,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { LoginInput, LoginSchema } from "@repo/validation"
 import Link from "next/link"
 import { authClient } from "@repo/better-auth"
+import { toast } from "@repo/stores"
 
 export default function LoginForm() {
   const form = useForm<LoginInput>({
@@ -29,10 +30,26 @@ export default function LoginForm() {
 
   const isSubmitting = form.formState.isSubmitting
   const handleSubmit: SubmitHandler<LoginInput> = async (data) => {
-    await authClient.signIn.email({
+    const res = await authClient.signIn.email({
       email: data?.email,
       password: data?.password,
       callbackURL: "/",
+    })
+    if (res?.error) {
+      toast.error({
+        title: "Error",
+        description: "Something went wrong",
+        position: "top",
+        type: "error",
+      })
+      return
+    }
+
+    toast.success({
+      title: "Success",
+      description: "Login successful!",
+      position: "top",
+      type: "success",
     })
   }
   return (

@@ -1,9 +1,15 @@
-import React from "react";
+import { Toaster } from "@repo/ui"
+import React from "react"
 
 export default function AuthLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
-  return <div className="min-h-screen grid place-items-center">{children}</div>;
+  return (
+    <div className="min-h-screen grid place-items-center">
+      {children}
+      <Toaster />
+    </div>
+  )
 }
