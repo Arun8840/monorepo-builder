@@ -11,6 +11,10 @@
       "types": "./src/client.ts",
       "default": "./src/client.ts"
     },
+    "./server": {
+      "types": "./src/server.ts",
+      "default": "./src/server.ts"
+    },
     "./types": {
       "types": "./src/types.ts",
       "default": "./src/types.ts"
@@ -26,6 +30,8 @@
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
+    "@repo/env": "workspace:*",
+    "@repo/db": "workspace:*",
     "better-auth": "^1.5.5"
   },
   "devDependencies": {
